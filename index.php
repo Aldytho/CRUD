@@ -31,7 +31,7 @@
   </figcaption>
 </figure>
 <!-- button -->
-<a href="kelola.html" type="button" class="btn btn-primary mb-3">
+<a href="kelola.php" type="button" class="btn btn-primary mb-3">
     <i class="fa fa-plus"></i>
     Tambah Data
 </a>
@@ -65,11 +65,11 @@
         </td>
         <td>JL. Kusuma Negara</td>
         <td>
-            <a href="kelola.html" type="button" class="btn btn-success btn-sm" >
+            <a href="kelola.php" type="button" class="btn btn-success btn-sm" >
                 <i class="fa fa-pencil" aria-hidden="true"></i>
                 
             </a>
-            <a href="kelola.html" type="button" class="btn btn-danger btn-sm">
+            <a href="kelola.php" type="button" class="btn btn-danger btn-sm">
             <i class="fa fa-trash"></i>
                 
             </a>
@@ -85,11 +85,11 @@
         </td>
         <td>JL. Hang kasturi</td>
         <td>
-            <a href="kelola.html" type="button" class="btn btn-success btn-sm" >
+            <a href="kelola.php" type="button" class="btn btn-success btn-sm" >
                 <i class="fa fa-pencil" aria-hidden="true"></i>
                 
             </a>
-            <a href="kelola.html" type="button" class="btn btn-danger btn-sm">
+            <a href="kelola.php" type="button" class="btn btn-danger btn-sm">
             <i class="fa fa-trash"></i>
                 
             </a>
