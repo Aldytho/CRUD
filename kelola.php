@@ -42,7 +42,7 @@
   <option value="2">Perempuan</option>
   <option value="3">Transgender</option>
 </select>
-<div class="mb-3">
+<div class="mb-3"> da
   <label for="formFile" class="form-label">Foto</label>
   <input class="form-control" type="file" id="formFile">
 </div>
