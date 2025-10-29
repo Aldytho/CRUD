@@ -50,10 +50,10 @@
     </thead>
     <tbody>
       <tr>
-        ...
+        
       </tr>
       <tr class="align-bottom">
-        ...
+        
       </tr>
       <tr>
         <td><center>1.</center></td>
