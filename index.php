@@ -1,3 +1,14 @@
+<?php
+include 'koneksi.php';
+
+$query ="SELECT * FROM tb_siswa";
+ $sql = mysqli_query($conn, $query);
+ $no = 0;
+
+
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -49,53 +60,55 @@
       </tr>
     </thead>
     <tbody>
+      <?php
+while($result = mysqli_fetch_assoc( $sql)){
+ 
+    ?>
       <tr>
-        
-      </tr>
-      <tr class="align-bottom">
-        
-      </tr>
-      <tr>
-        <td><center>1.</center></td>
-        <td>112223344</td>
-        <td>Alexander kurniawan</td>
-        <td>Laki-Laki</td>
+        <td><center>
+          <?php
+          echo ++$no;
+          ?>
+        </center></td>
+        <td><?php
+          echo $result['nisn'];
+          ?></td>
+        <td><?php
+          echo $result['nama_siswa'];
+          ?></td>
+        <td><?php
+          echo $result['jenis_kelamin'];
+          ?></td>
         <td>
-            <img src="img/img1.jpg" alt="Mouse" style="width: 100px;">
+            <img src="/img/<?php
+          echo $result['foto_siswa'];
+          ?>" style="width: 150px;">
         </td>
-        <td>JL. Kusuma Negara</td>
+        <td><?php
+          echo $result['alamat'];
+          ?></td>
         <td>
-            <a href="kelola.php" type="button" class="btn btn-success btn-sm" >
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-                
+            <a href="kelola.php?ubah=<?php
+          echo $result['id_siswa'];
+          ?>" type="button" class="btn btn-success btn-sm" >
+                <i class="fa fa-pencil" ></i>
+                +
             </a>
-            <a href="kelola.php" type="button" class="btn btn-danger btn-sm">
+            <a href="proses.php?hapus=<?php
+          echo $result['id_siswa'];
+          ?>" name ="hapus" value ="delete" type="button" class="btn btn-danger btn-sm">
             <i class="fa fa-trash"></i>
-                
+                -
             </a>
         </td>
     </tr>
-    <tr>
-        <td><center>2.</center></td>
-        <td>223344</td>
-        <td>Siti</td>
-        <td>Perempuan</td>
-        <td>
-            <img src="img/img2.jpg" alt="Mouse" style="width: 100px;">
-        </td>
-        <td>JL. Hang kasturi</td>
-        <td>
-            <a href="kelola.php" type="button" class="btn btn-success btn-sm" >
-                <i class="fa fa-pencil" aria-hidden="true"></i>
-                
-            </a>
-            <a href="kelola.php" type="button" class="btn btn-danger btn-sm">
-            <i class="fa fa-trash"></i>
-                
-            </a>
-        </td>
-    </tr>
-    </tbody>
+    <?php
+}
+    ?>
+      
+        
+      
+     
   </table>
 </div>
 </nav>
