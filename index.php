@@ -80,7 +80,7 @@ while($result = mysqli_fetch_assoc( $sql)){
           echo $result['jenis_kelamin'];
           ?></td>
         <td>
-            <img src="/img/<?php
+            <img src="img/<?php
           echo $result['foto_siswa'];
           ?>" style="width: 150px;">
         </td>
@@ -92,13 +92,13 @@ while($result = mysqli_fetch_assoc( $sql)){
           echo $result['id_siswa'];
           ?>" type="button" class="btn btn-success btn-sm" >
                 <i class="fa fa-pencil" ></i>
-                +
+                
             </a>
             <a href="proses.php?hapus=<?php
           echo $result['id_siswa'];
           ?>" name ="hapus" value ="delete" type="button" class="btn btn-danger btn-sm">
             <i class="fa fa-trash"></i>
-                -
+                
             </a>
         </td>
     </tr>
